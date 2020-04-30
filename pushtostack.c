@@ -15,7 +15,7 @@ int ch_num(int data, t_folder **A)
 }
 void ch_int(char *tab, t_folder *head, t_folder **A)
 {
-    head->data = ft_atoi(tab);
+    head->data = ft_atoiS(tab);
     if (ch_num(head->data, A))
     {
         write(1, "Error\n", 6);
@@ -45,7 +45,7 @@ int pushtostack(char **tab, t_folder **A)
     {
         if (!(head = malloc(sizeof(t_folder))))
             return (0);
-        if (ft_atoi(tab[i]) <= 2147483647 && ft_atoi(tab[i]) >= -2147483648)
+        if (ft_atoiS(tab[i]) <= 2147483647 && ft_atoiS(tab[i]) >= -2147483648)
             ch_int(tab[i], head, A);
         else
             return (0);

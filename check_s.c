@@ -74,8 +74,8 @@ int add_ch(char *s)
 	char *a;
 	char *b;
 
-	a = ft_itoa(ft_atoi(s));
-	b = ft_itoa(ft_atoi(&s[1]));
+	a = ft_itoaS(ft_atoiS(s));
+	b = ft_itoaS(ft_atoiS(&s[1]));
 	if (((s[0] == '+') && (ft_strcmp(&s[1], b))) ||\
 	((s[0] != '+') && ft_strcmp(s, a)))
 	{

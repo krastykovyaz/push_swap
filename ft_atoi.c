@@ -6,34 +6,40 @@
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 20:29:16 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/30 09:34:54 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/04/30 10:15:34 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/printf.h"
+#include "./includes/checker.h"
 
-int	ft_atoi(const char *str)
+#include <stdio.h>
+
+__int128_t ft_atoiS(const char *s)
 {
-	short int		sign;
-	unsigned long	result;
+	__int128_t nb;
+	int         i;
+	int         sign;
 
+	nb = 0;
+	i = 0;
 	sign = 1;
-	result = 0;
-	while (*str == '\r' || *str == ' ' || *str == '\t' ||
-	*str == '\v' || *str == '\n' || *str == '\f')
-		++str;
-	if (*str == '-' && ++str)
-		sign = -1;
-	else if (*str == '+')
-		++str;
-	while (if_digit(*str))
+	while (s[i] == ' ' || s[i] == '\t' || s[i] == '\v' ||\
+	s[i] == '\f' || s[i] == '\n')
+		i++;
+	sign = (s[i] == '-') ? -1 : 1;
+	if (s[i] == '+' || s[i] == '-')
+		i++;
+	while (s[i] == '0')
+		i++;
+	while (s[i] >= '0' && s[i] < '9')
 	{
-		result = result * 10 + ((unsigned long)*str - '0');
-		str++;
+		nb = nb * 10 + (s[i] - '0');
+		i++;
 	}
-	if (result > 9223372036854775807UL && sign == 1)
-		result = -1;
-	else if (result > 9223372036854775808UL && sign == -1)
-		result = 0;
-	return ((int)result * sign);
+	return (nb *sign);
+}
+
+int main()
+{
+    printf("%s\n", "-1234");
 }
