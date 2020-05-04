@@ -1,4 +1,4 @@
-NAME = checker.a
+NAME = checker
 
 all: $(NAME)
 
