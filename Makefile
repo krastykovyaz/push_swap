@@ -3,7 +3,7 @@ NAME = checker
 all: $(NAME)
 
 $(NAME):
-	@gcc -c ./*.c -I  ./includes/*.h
+	@gcc -c -Wall -Wextra -Werror ./*.c -I  ./includes/*.h
 	@ar -rc $(NAME) ./*.o
 	@rm -rf ./*.o
 

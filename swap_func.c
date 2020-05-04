@@ -30,8 +30,6 @@ void sb(t_folder **B, int i)
 
 void ss(t_folder **A, t_folder **B, int i)
 {
-    t_folder *tmp;
-
     sa(A, 0);
 	sb(B, 0);
 	if (i)
