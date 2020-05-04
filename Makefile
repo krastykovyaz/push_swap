@@ -1,4 +1,4 @@
-NAME = checker
+NAME = checker.a
 
 all: $(NAME)
 
@@ -19,4 +19,4 @@ re: fclean all
 
 test:
 	@gcc ./*.c -I ./includes/*.h -o prog
-	@./prog 34 5 7
+	@./prog 3 2 1 0

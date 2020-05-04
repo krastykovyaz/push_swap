@@ -16,11 +16,11 @@ t_folder *read_seq(char **av, t_num *count)
     char **new;
     t_folder *A;
 
-    i = 0;
+    i = 1;
     count->c_A = 0;
     count->c_B = 0;
     A = NULL;
-    while (av[1])
+    while (av[i])
     {
         new = ft_strsplit(av[i], ' ');
         if (check_s(new))

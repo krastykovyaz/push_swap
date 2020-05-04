@@ -6,7 +6,7 @@
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/21 20:29:16 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/30 10:15:34 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/04/30 13:00:43 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,4 @@ __int128_t ft_atoiS(const char *s)
 		i++;
 	}
 	return (nb *sign);
-}
-
-int main()
-{
-    printf("%s\n", "-1234");
 }

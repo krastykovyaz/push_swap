@@ -41,7 +41,7 @@ int pushtostack(char **tab, t_folder **A)
     t_folder *buf;
 
     i = 0;
-    while(tab[i])
+    while(tab[i] != '\0')
     {
         if (!(head = malloc(sizeof(t_folder))))
             return (0);
