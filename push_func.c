@@ -25,19 +25,19 @@ void pb(t_folder **A, t_folder **B, t_num *count)
 {
     t_folder *tmp;
 
-    if (*B)
+    if (*A)
     {
-        tmp = *B;
-        *B = (*B)->next;
+        tmp = *A;
+        *A = (*A)->next;
         tmp->next = NULL;
-        if (!*A)
-            *A = tmp;
+        if (!*B)
+            *B = tmp;
         else
         {
-            tmp->next = *A;
-            *A = tmp;
+            tmp->next = *B;
+            *B = tmp;
         }
-        count->c_A++;
-        count->c_B--;
+        count->c_A--;
+        count->c_B++;
     }
 }

@@ -10,7 +10,7 @@ char    *ft_strnew(size_t size)
         return (NULL);
     len = size + 1;
     while (len-- > 0)
-        ((unsigned char *)s)[size] = (unsigned char)'\0';
+        ((unsigned char *)s)[len] = (unsigned char)'\0';
     return (s);
 }
 
@@ -47,16 +47,12 @@ char *ft_strjoin(char const *s1, const char *s2)
         return (NULL);
     while (s1[j])
     {
-        s12[i] = s1[j];
-        i++;
-        j++;
+        s12[i++] = s1[j++];
     }
     j = 0;
     while (s2[j])
     {
-        s12[i] = s2[j];
-        i++;
-        j++;
+        s12[i++] = s2[j++];
     }
     s12[i] = '\0';
     return (s12);
@@ -71,8 +67,7 @@ int get_next_line(const int fd, char **line)
 
     if (fd < 0 || line == NULL)
         return (-1);
-    text = read(fd, buffer, BUFF_SIZE);
-    while (text > 0)
+    while ((text = read(fd, buffer, BUFF_SIZE)) > 0)
     {
         buffer[text] = '\0';
         if (s[fd] == NULL)
