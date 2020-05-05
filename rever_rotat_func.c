@@ -1,6 +1,6 @@
 #include "./includes/checker.h"
 
-void rra(t_folder **A, int i)
+void rra(t_folder **A)
 {
     t_folder *start;
     t_folder *finish;
@@ -23,12 +23,10 @@ void rra(t_folder **A, int i)
             finish->next = NULL;
         }
         *A = start;
-        if (i)
-		    write(1, "rra\n", 4);
     }
 }
 
-void rrb(t_folder **B, int i)
+void rrb(t_folder **B)
 {
     t_folder *x;
     t_folder *y;
@@ -51,16 +49,13 @@ void rrb(t_folder **B, int i)
             y->next = NULL;
         }
     }
-    if (i)
-        write(1, "rrb\n", 4);
 }
-void rrr(t_folder **A,t_folder **B, int i)
+
+void rrr(t_folder **A,t_folder **B)
 {
     if (*B && *A)
     {
-        rra(A, i);
-        rrb(B, i);
+        rra(A);
+        rrb(B);
     }
-    if (i)
-        write(1, "rrr\n", 4);
 }

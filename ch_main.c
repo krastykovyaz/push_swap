@@ -17,7 +17,7 @@ int main(int ac, char **av)
     {
         if (com_inspect(&A, &B, line, &count))
         {
-            write(1, "Error\n", 6);
+            write(2, "Error\n", 6);
             exit(-1);
         }
         if (line)

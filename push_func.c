@@ -1,6 +1,6 @@
 #include "./includes/checker.h"
 
-void pa(t_folder **A, t_folder **B, t_num *count, int i)
+void pa(t_folder **A, t_folder **B, t_num *count)
 {
     t_folder *tmp;
 
@@ -18,12 +18,10 @@ void pa(t_folder **A, t_folder **B, t_num *count, int i)
         }
         count->c_A++;
         count->c_B--;
-        if (i)
-            write(1, "pa\n", 3);
     }
 }
 
-void pb(t_folder **A, t_folder **B, t_num *count, int i)
+void pb(t_folder **A, t_folder **B, t_num *count)
 {
     t_folder *tmp;
 
@@ -41,7 +39,5 @@ void pb(t_folder **A, t_folder **B, t_num *count, int i)
         }
         count->c_A++;
         count->c_B--;
-        if (i)
-            write(1, "pb\n", 3);
     }
 }
