@@ -6,7 +6,7 @@
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/16 00:35:24 by lnoisome          #+#    #+#             */
-/*   Updated: 2020/05/21 09:00:20 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/05/24 16:19:35 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # define BUFF_SIZE 10
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdio.h>
 
 typedef	struct			s_folder
 {

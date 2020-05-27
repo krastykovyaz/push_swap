@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
+/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 16:49:54 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/20 20:18:36 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/25 09:07:28 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,10 +62,9 @@ t_stack	*init_stack_with_char_mass(int len, char **av)
 {
 	int i;
 	int tab[len];
-
+	
 	if (len < 2)
 	{
-		write(1, "\n", 1);
 		exit(0);
 	}
 	i = 1;

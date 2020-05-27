@@ -6,7 +6,7 @@
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/16 00:34:12 by lnoisome          #+#    #+#             */
-/*   Updated: 2020/05/16 00:34:28 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/05/24 17:31:01 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	sa(t_folder **a)
 {
 	t_folder *tmp;
 
-	if (*a == NULL)
+	if (*a == NULL || (*a)->next == NULL)
 		return ;
 	tmp = *a;
 	*a = (*a)->next;
@@ -28,7 +28,7 @@ void	sb(t_folder **b)
 {
 	t_folder *tmp;
 
-	if (*b == NULL)
+	if (*b == NULL || (*b)->next == NULL)
 		return ;
 	tmp = *b;
 	*b = (*b)->next;

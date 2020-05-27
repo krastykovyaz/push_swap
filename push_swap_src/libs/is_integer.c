@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   is_integer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
+/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/27 19:17:20 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/27 19:19:33 by ccharmai         ###   ########.fr       */
+/*   Updated: 2020/05/25 09:36:45 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int		is_integer(char *line)
 	int i;
 
 	i = 0;
+	if (line[0] == '-' && line[1] == '\0')
+		return (0);
 	if (line[i] == '-')
 		i++;
 	while (line[i] != '\0')

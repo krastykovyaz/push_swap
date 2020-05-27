@@ -6,7 +6,7 @@
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/16 00:29:57 by lnoisome          #+#    #+#             */
-/*   Updated: 2020/05/21 08:59:40 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/05/24 17:31:22 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,6 @@ t_folder	*read_seq(char **av, t_num *count)
 			exit(-1);
 		i++;
 		free_stack(new);
-	}
-	if (count->c_a == 1)
-	{
-		write(1, "OK\n", 3);
-		exit(-1);
 	}
 	return (a);
 }
