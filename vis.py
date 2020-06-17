@@ -1,10 +1,11 @@
 import cmd, sys, subprocess, time
 import tkinter as tk
 
-# global st_a
-# global st_b
 argv = sys.argv[1:]
-
+if (len(argv) > 200):
+    print("It is not an error:)\n")
+    print ("Try to use less than 200 numbers, cause that will be more representative!")
+    exit()
 for i in range(0, len(argv)):
     argv[i] = int(argv[i])
 myList = list(range(1, (len(argv) + 1)))
