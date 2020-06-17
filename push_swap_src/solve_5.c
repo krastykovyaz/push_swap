@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   solve_5.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
+/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/30 16:06:02 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/16 21:58:43 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/06/05 23:03:45 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 23:03:47 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/header.h"
+#include "./includes/header.h"
 
 void	move_one_smaller(t_stack **a, t_stack **b)
 {

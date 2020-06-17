@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   find_position.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
+/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/28 20:41:10 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/20 19:22:14 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/06/05 23:02:13 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 23:02:15 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/header.h"
+#include "./includes/header.h"
 
 t_pos	get_position_info(t_stack *stack)
 {

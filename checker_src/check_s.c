@@ -6,20 +6,25 @@
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/15 21:17:01 by lnoisome          #+#    #+#             */
-/*   Updated: 2020/05/20 22:42:40 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/06/05 16:04:21 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "./includes/checker.h"
+#include <stdio.h>
 
-int		ft_strcmp(const char *s1, const char *s2)
+int		ft_strcmp(char *l1, char *l2)
 {
-	while (*s1 && *s2 && *s1 == *s2)
+	int	i;
+
+	i = 0;
+	while (l1[i] != '\0' && l2[i] != '\0')
 	{
-		s1++;
-		s2++;
+		if (l1[i] != l2[i])
+			return (l2[i] - l1[i]);
+		i++;
 	}
-	return ((unsigned char)*s1 - (unsigned char)*s2);
+	return (0);
 }
 
 int		is_int(char *str)
@@ -52,26 +57,9 @@ int		is_int(char *str)
 
 int		add_ch(char *s)
 {
-	char *a;
-	char *b;
-
 	if (!is_int(s))
 		return (1);
-	a = ft_itoas(ft_atois(s));
-	b = ft_itoas(ft_atois(&s[1]));
-	if (((s[0] == '+') && (ft_strcmp(&s[1], b))) ||\
-	((s[0] != '+') && ft_strcmp(s, a)))
-	{
-		free(a);
-		free(b);
-		return (1);
-	}
-	else
-	{
-		free(a);
-		free(b);
-		return (0);
-	}
+	return (0);
 }
 
 int		check_s(char **s)

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   functions.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
+/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 18:22:46 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/18 12:40:55 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/06/05 22:56:27 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 22:56:39 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/header.h"
+#include "./includes/header.h"
 
 void	swap(t_stack *stack, char act)
 {

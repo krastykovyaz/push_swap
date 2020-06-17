@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 16:49:54 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/25 09:07:28 by lnoisome         ###   ########.fr       */
+/*   Created: 2020/06/05 23:02:37 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 23:02:41 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/header.h"
+#include "./includes/header.h"
 
 t_stack	*create_head(int element)
 {
@@ -60,9 +60,9 @@ t_stack	*init_stack_with_mass(int len, int *mass)
 
 t_stack	*init_stack_with_char_mass(int len, char **av)
 {
-	int i;
+	int	i;
 	int tab[len];
-	
+
 	if (len < 2)
 	{
 		exit(0);

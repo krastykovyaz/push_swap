@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/19 16:41:43 by lnoisome          #+#    #+#             */
-/*   Updated: 2020/05/20 13:26:37 by lnoisome         ###   ########.fr       */
+/*   Created: 2020/06/05 23:03:58 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 23:04:00 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/header.h"
+#include "./includes/header.h"
 
-void	w_loop(t_stack **a, t_stack **b, int col_blocks, int len)
+void	way_to_b(t_stack **a, t_stack **b, int col_blocks, int len)
 {
 	int i;
 	int step;
@@ -27,7 +27,7 @@ void	w_loop(t_stack **a, t_stack **b, int col_blocks, int len)
 	solve_b(&(*a), &(*b));
 }
 
-void	fori(t_stack **a, t_stack **b, int step, int k)
+void	rotation_for_each(t_stack **a, t_stack **b, int step, int k)
 {
 	int i;
 
@@ -40,7 +40,7 @@ void	fori(t_stack **a, t_stack **b, int step, int k)
 	solve_b(&(*a), &(*b));
 }
 
-void	whi_loop(t_stack **a, t_stack **b, int *mass, int *save)
+void	transfer_to_b(t_stack **a, t_stack **b, int *mass, int *save)
 {
 	int i;
 	int step;
@@ -57,7 +57,7 @@ void	whi_loop(t_stack **a, t_stack **b, int *mass, int *save)
 	}
 }
 
-void	el_if(t_stack **a, t_stack **b, int *save, int *mass)
+void	depended_push(t_stack **a, t_stack **b, int *save, int *mass)
 {
 	int step;
 
@@ -82,17 +82,17 @@ void	mysolve(t_stack **a, int col_blocks)
 	save[1] = len;
 	mass = stack_2_mass(len, *a);
 	ft_qsort(len, mass);
-	whi_loop(&(*a), &b, mass, save);
+	transfer_to_b(&(*a), &b, mass, save);
 	solve_b(&(*a), &b);
 	save[2] = 1;
 	while (save[2] < col_blocks - 1)
 	{
 		i = 0;
 		while (i++ < (len - (len / col_blocks) * save[2]))
-			el_if(&(*a), &b, save, mass);
-		fori(&(*a), &b, (len / col_blocks), save[2]);
+			depended_push(&(*a), &b, save, mass);
+		rotation_for_each(&(*a), &b, (len / col_blocks), save[2]);
 		save[2]++;
 	}
-	w_loop(&(*a), &b, col_blocks, len);
+	way_to_b(&(*a), &b, col_blocks, len);
 	free(mass);
 }

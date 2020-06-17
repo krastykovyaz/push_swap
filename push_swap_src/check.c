@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   check.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
+/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 20:16:54 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/20 20:18:25 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/06/05 23:01:47 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 23:01:49 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/header.h"
+#include "./includes/header.h"
 
 int		is_sorted(t_stack *stack)
 {
@@ -67,7 +67,7 @@ int		is_int(char *str)
 	}
 	if (len > 10)
 		return (0);
-	if (len < 10)
+	if (len < 10 || str[0] == '+')
 		return (1);
 	if (is_minus == 1)
 	{

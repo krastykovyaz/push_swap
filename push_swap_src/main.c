@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 17:11:33 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/25 09:01:29 by lnoisome         ###   ########.fr       */
+/*   Created: 2020/06/05 22:58:14 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 22:58:27 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "includes/header.h"
+#include "./includes/header.h"
 
 int	main(int ac, char **av)
 {

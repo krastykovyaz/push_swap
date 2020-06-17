@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   solve_2.c                                          :+:      :+:    :+:   */
+/*   solve_4.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
+/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/28 20:35:09 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/16 21:58:08 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/06/05 23:03:38 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 23:03:40 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/header.h"
+#include "./includes/header.h"
 
-void	solve_2(t_stack **a)
+void	solve_4(t_stack **a)
 {
-	if (!is_sorted(*a))
-		swap(*a, 'a');
+	t_stack	*b;
+
+	b = NULL;
+	move_one_smaller(&(*a), &b);
+	solve_3(&(*a));
+	push(&b, &(*a), 'a');
 }

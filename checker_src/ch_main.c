@@ -6,7 +6,7 @@
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/15 20:13:31 by lnoisome          #+#    #+#             */
-/*   Updated: 2020/05/24 16:45:48 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/06/05 16:17:26 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,41 @@ void	n_valid(void)
 	exit(-1);
 }
 
+int		is_integer(char *line)
+{
+	int i;
+
+	i = 0;
+	if (line[0] == '-' && line[1] == '\0')
+		return (0);
+	if (line[i] == '-')
+		i++;
+	while (line[i] != '\0')
+	{
+		if (line[i] < '0' || line[i] > '9')
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+void	parenth_check(int len, char **av)
+{
+	int i;
+
+	if (len < 2)
+	{
+		exit(0);
+	}
+	i = 1;
+	while (i < len)
+	{
+		if (!is_integer(av[i]))
+			n_valid();
+		i++;
+	}
+}
+
 int		main(int ac, char **av)
 {
 	t_folder	*a;
@@ -27,6 +62,7 @@ int		main(int ac, char **av)
 
 	a = NULL;
 	b = NULL;
+	parenth_check(ac, av);
 	if (ac != 1)
 		a = read_seq(av, &count);
 	else

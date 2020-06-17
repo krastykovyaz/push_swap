@@ -6,7 +6,7 @@
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/16 00:26:52 by lnoisome          #+#    #+#             */
-/*   Updated: 2020/05/16 00:29:33 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/06/01 22:52:38 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void		ch_int(char *tab, t_folder *head, t_folder **a)
 	head->data = ft_atois(tab);
 	if (ch_num(head->data, a))
 	{
-		write(1, "Error\n", 6);
+		write(2, "Error\n", 6);
 		exit(-1);
 	}
 	head->next = NULL;

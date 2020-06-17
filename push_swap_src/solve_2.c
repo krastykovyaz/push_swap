@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_integer.c                                       :+:      :+:    :+:   */
+/*   solve_2.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 19:17:20 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/25 09:36:45 by lnoisome         ###   ########.fr       */
+/*   Created: 2020/06/05 23:03:19 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 23:03:21 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/header.h"
+#include "./includes/header.h"
 
-int		is_integer(char *line)
+void	solve_2(t_stack **a)
 {
-	int i;
-
-	i = 0;
-	if (line[0] == '-' && line[1] == '\0')
-		return (0);
-	if (line[i] == '-')
-		i++;
-	while (line[i] != '\0')
-	{
-		if (line[i] < '0' || line[i] > '9')
-			return (0);
-		i++;
-	}
-	return (1);
+	if (!is_sorted(*a))
+		swap(*a, 'a');
 }

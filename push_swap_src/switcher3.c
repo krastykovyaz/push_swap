@@ -6,13 +6,13 @@
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/19 16:44:00 by lnoisome          #+#    #+#             */
-/*   Updated: 2020/05/20 20:58:29 by lnoisome         ###   ########.fr       */
+/*   Updated: 2020/06/05 21:28:55 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/header.h"
+#include "./includes/header.h"
 
-void	contin(t_stack **a, int len)
+void	continue_of_switcher(t_stack **a, int len)
 {
 	if (len > 120 && len <= 180)
 		mysolve(&(*a), 4);
@@ -54,6 +54,6 @@ void	switcher(t_stack *a)
 	else if (len >= 6 && len <= 120)
 		mysolve(&a, 3);
 	else
-		contin(&a, len);
+		continue_of_switcher(&a, len);
 	free_stack(a);
 }

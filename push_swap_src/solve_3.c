@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   solve_3.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
+/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 21:26:45 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/16 21:57:32 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/06/05 23:03:26 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 23:03:28 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/header.h"
+#include "./includes/header.h"
 
 void	solve_3(t_stack **a)
 {

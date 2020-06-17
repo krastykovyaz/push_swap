@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   qsort.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
+/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/30 19:28:17 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/16 22:16:58 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/06/05 23:03:10 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 23:03:12 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/header.h"
+#include "./includes/header.h"
 
 static void	init_i_j(int *i, int *j, int len)
 {

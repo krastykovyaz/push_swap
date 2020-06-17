@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 21:07:10 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/20 09:51:29 by lnoisome         ###   ########.fr       */
+/*   Created: 2020/06/05 23:03:52 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 23:03:54 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/header.h"
+#include "./includes/header.h"
 
-void	manip(int down, int up, t_stack **b, t_pos info)
+void	choose_side(int down, int up, t_stack **b, t_pos info)
 {
 	int i;
 
@@ -25,7 +25,7 @@ void	manip(int down, int up, t_stack **b, t_pos info)
 			reverse_rotate(&(*b), 'b');
 }
 
-void	wh_loop(int counter, t_stack **a)
+void	put_to_bottom(int counter, t_stack **a)
 {
 	int i;
 
@@ -51,11 +51,11 @@ void	solve_b(t_stack **a, t_stack **b)
 		info.min_position : info.max_position;
 		down = up == info.max_position ? info.min_position : info.max_position;
 		if_min = 0;
-		manip(down, up, &(*b), info);
+		choose_side(down, up, &(*b), info);
 		if ((*b)->element == info.min_element)
 			if_min = 1;
 		push(&(*b), &(*a), 'a');
 		if_min ? rotate(&(*a), 'a') : counter++;
 	}
-	wh_loop(counter, &(*a));
+	put_to_bottom(counter, &(*a));
 }

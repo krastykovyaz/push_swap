@@ -1,23 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   solve_4.c                                          :+:      :+:    :+:   */
+/*   unique.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
+/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/28 20:40:58 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/16 21:57:43 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/06/05 23:04:11 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 23:04:13 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/header.h"
-
-void	solve_4(t_stack **a)
+int	check_unique_int_mass(int len, int *mass)
 {
-	t_stack	*b;
+	int	i;
+	int	z;
 
-	b = NULL;
-	move_one_smaller(&(*a), &b);
-	solve_3(&(*a));
-	push(&b, &(*a), 'a');
+	i = 0;
+	if (len == 1)
+		return (1);
+	while (i < len - 1)
+	{
+		z = i + 1;
+		while (z < len)
+		{
+			if (mass[i] == mass[z])
+				return (0);
+			z++;
+		}
+		i++;
+	}
+	return (1);
 }

@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   crud.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
+/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 17:17:07 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/04/30 15:58:47 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/06/05 23:01:57 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 23:01:59 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/header.h"
+#include "./includes/header.h"
 
 int		delete_head(t_stack **head)
 {

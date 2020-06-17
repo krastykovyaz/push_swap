@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   memory.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
+/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/04/27 16:49:03 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/18 13:09:29 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/06/05 23:03:01 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 23:03:03 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/header.h"
+#include "./includes/header.h"
 
 void	free_stack(t_stack *stack)
 {

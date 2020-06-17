@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   unique.c                                           :+:      :+:    :+:   */
+/*   is_integer.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ccharmai <5429549@mail.ru>                 +#+  +:+       +#+        */
+/*   By: lnoisome <lnoisome@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/05/13 17:42:29 by ccharmai          #+#    #+#             */
-/*   Updated: 2020/05/13 17:57:06 by ccharmai         ###   ########.fr       */
+/*   Created: 2020/06/05 23:02:51 by lnoisome          #+#    #+#             */
+/*   Updated: 2020/06/05 23:02:53 by lnoisome         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	check_unique_int_mass(int len, int *mass)
+#include "./includes/header.h"
+
+int		is_integer(char *line)
 {
-	int	i;
-	int	z;
+	int i;
 
 	i = 0;
-	if (len == 1)
-		return (1);
-	while (i < len - 1)
+	if (line[0] == '-' && line[1] == '\0')
+		return (0);
+	if (line[i] == '-')
+		i++;
+	while (line[i] != '\0')
 	{
-		z = i + 1;
-		while (z < len)
-		{
-			if (mass[i] == mass[z])
-				return (0);
-			z++;
-		}
+		if (line[i] < '0' || line[i] > '9')
+			return (0);
 		i++;
 	}
 	return (1);
