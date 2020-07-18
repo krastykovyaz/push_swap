@@ -26,11 +26,11 @@ number = height / len(argv)
 distribution = ((width - 10) / 2) / myList[-1]
 
 def set_color(i, arr):
-        if i < len(st_a) / 3:
+        if i <= len(st_a) / 3:
             return "white"
-        elif i > len(st_a) / 3 and i < (len(st_a) * 2 / 3):
+        elif i > len(st_a) / 3 and i <= (len(st_a) * 2 / 3):
             return "blue"
-        else:
+        elif i > len(st_a) / 3:
             return "red"
 
 def stack_a(st_a):
